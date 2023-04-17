@@ -1,0 +1,15 @@
+        url = 'https://discord.com/api/v9/channels/'+channel7+'/messages'
+        data = {"content": mess7}
+        header = {"authorization": token}
+        while True:
+            time.sleep(0.0001)
+            r = requests.post(url, data=data, headers=header, proxies=proxies)
+            if r.status_code == 200:
+                print(f'{w}[{lg}+{w}] » Successfully Sent Message > {mess7} on {token}')
+            else:
+                print(f"{w}[{rr}-{w}] » Couldn't Send Message on > {token} Code » {r.status_code}")
+    def thread():
+        channel_id = channel7
+        text = mess7
+        
+        (this is not part of the code, just trying to say, im trying to send announcements through my account from python)
